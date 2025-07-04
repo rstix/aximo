@@ -21,12 +21,13 @@ export default function Header() {
           </nav>
 
           {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4 text-sm">
+          <button className="bg-gray-900 text-white px-4 py-2 rounded-md">Kontaktujte nás</button>
+          {/* <div className="hidden lg:flex items-center space-x-4 text-sm">
             <div className="text-gray-600">
               <div>+420 608 600 745</div>
               <div>office@aximogroup.com</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

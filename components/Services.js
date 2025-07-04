@@ -43,9 +43,9 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group cursor-pointer transform transition-all duration-300 hover:scale-105"
+              className="group cursor-pointer transform transition-all duration-300 hover:scale-105 h-full"
             >
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200 h-full flex flex-col">
                 <div className="w-16 h-16 rounded-xl bg-gray-100 flex items-center justify-center text-2xl mb-6 mx-auto">
                   {service.icon}
                 </div>
