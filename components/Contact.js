@@ -1,3 +1,6 @@
+import { Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Building2 as BuildingOfficeIcon, Linkedin, Facebook } from "lucide-react";
+
+
 export default function Contact() {
   return (
     <section id="kontakt" className="py-20 bg-gray-900 text-white">
@@ -16,7 +19,7 @@ export default function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">📧</div>
+                <div className="text-2xl"><MailIcon /></div>
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
                   <p className="text-gray-300">office@aximogroup.com</p>
@@ -24,7 +27,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">📞</div>
+                <div className="text-2xl"><PhoneIcon /></div>
                 <div>
                   <h3 className="font-semibold text-lg">Telefon</h3>
                   <p className="text-gray-300">+420 608 600 745</p>
@@ -32,7 +35,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">📍</div>
+                <div className="text-2xl"><MapPinIcon /></div>
                 <div>
                   <h3 className="font-semibold text-lg">Adresa</h3>
                   <p className="text-gray-300">
@@ -44,7 +47,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="text-2xl">🏢</div>
+                <div className="text-2xl"><BuildingOfficeIcon /></div>
                 <div>
                   <h3 className="font-semibold text-lg">IČO / DIČ</h3>
                   <p className="text-gray-300">
@@ -60,13 +63,13 @@ export default function Contact() {
               <h3 className="font-semibold text-lg mb-4">Sledujte nás</h3>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors text-2xl">
-                  📘
+                  <Linkedin />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-2xl">
+                {/* <a href="#" className="text-gray-400 hover:text-white transition-colors text-2xl">
                   💼
-                </a>
+                </a> */}
                 <a href="#" className="text-gray-400 hover:text-white transition-colors text-2xl">
-                  📷
+                  <Facebook />
                 </a>
               </div>
             </div>
