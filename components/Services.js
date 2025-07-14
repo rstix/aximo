@@ -12,34 +12,29 @@ export default function Services() {
       description: "Kompletní řešení průmyslových pohonů včetně servisu a údržby. Zajišťujeme návrh, dodávku, montáž i následnou technickou podporu. Naše zkušenosti pokrývají široké spektrum aplikací v průmyslu.",
       icon: <Engine size={82} color="#374151" />,
       url: '/pohony',
-      image: '/engine.png',
-      imageWidth: 300,
-      imageHeight: 350,
+      image: '/pohony.png',
     },
     {
       title: "Stavba a elektro",
       description: "Stavební úpravy a elektroinstalace na klíč. Realizujeme kompletní rekonstrukce, nové instalace i modernizace stávajících systémů. Zajistíme projekt, dodávku, montáž i následný servis dle vašich potřeb.",
       icon: <Construction size={82} color="#374151" />,
-      image: '/c.png',
+      image: '/stavba.png',
       url: '/stavba-a-elektro',
-      imageWidth: 650,
-      imageHeight: 550,
     },
     {
       title: "Komponenty",
       description: "Dodávky kvalitních komponentů a náhradních dílů. Spolupracujeme s předními výrobci a garantujeme rychlé dodání i technickou podporu. Nabízíme řešení na míru pro různé průmyslové aplikace.",
       icon: <Components size={82} color="#374151" />,
       url: '/komponenty',
-      image: '/bolts.png',
-      imageWidth: 300,
-      imageHeight: 350,
+      image: '/komponenty.png',
     },
     {
       title: "Servis",
       description: "Rychlý a spolehlivý servis včetně krizových situací. Zajišťujeme opravy, revize i modernizaci stávajících systémů. Nabízíme komplexní řešení pro různé průmyslové aplikace.",
       icon: <Service size={82} color="#374151" />,
-      url: '/servis'
-    }
+      url: '/servis',
+      image: '/servis.png',
+    },
   ];
 
   return (
@@ -57,7 +52,7 @@ export default function Services() {
                 index % 2 === 1 ? 'justify-center' : 'justify-center'
               }`}>
                 {service.image ? (
-                  <Image src={service.image} alt={service.title} width={service.imageWidth} height={service.imageHeight} />
+                  <Image src={service.image} alt={service.title} width={service.imageWidth || 300} height={service.imageHeight || 350 } />
                 ) : (
                   service.icon
                 )}
