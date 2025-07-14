@@ -11,8 +11,11 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      {/* prechod do bile/cerne */}
+      {/* TODO: <AboutUs /> */}
       <Services />
-      <WhyChooseUs />
+      {/* sekce vypadaji prazdne  */}
+      {/* <WhyChooseUs /> */}
       <References />
       <Contact />
       <Footer />

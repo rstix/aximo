@@ -2,64 +2,84 @@ import Engine from './icons/Engine';
 import Construction from './icons/Construction';
 import Components from './icons/Components';
 import Service from './icons/Service';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Services() {
   const services = [
     {
       title: "Pohony",
-      description: "Kompletní řešení průmyslových pohonů včetně servisu a údržby",
-      icon: <Engine size={32} color="#374151" />
+      description: "Kompletní řešení průmyslových pohonů včetně servisu a údržby. Zajišťujeme návrh, dodávku, montáž i následnou technickou podporu. Naše zkušenosti pokrývají široké spektrum aplikací v průmyslu.",
+      icon: <Engine size={82} color="#374151" />,
+      url: '/pohony',
+      image: '/engine.png',
+      imageWidth: 300,
+      imageHeight: 350,
     },
     {
       title: "Stavba a elektro",
-      description: "Stavební úpravy a elektroinstalace na klíč",
-      icon: <Construction size={32} color="#374151" />
+      description: "Stavební úpravy a elektroinstalace na klíč. Realizujeme kompletní rekonstrukce, nové instalace i modernizace stávajících systémů. Zajistíme projekt, dodávku, montáž i následný servis dle vašich potřeb.",
+      icon: <Construction size={82} color="#374151" />,
+      image: '/c.png',
+      url: '/stavba-a-elektro',
+      imageWidth: 650,
+      imageHeight: 550,
     },
     {
       title: "Komponenty",
-      description: "Dodávky kvalitních komponentů a náhradních dílů",
-      icon: <Components size={32} color="#374151" />
+      description: "Dodávky kvalitních komponentů a náhradních dílů. Spolupracujeme s předními výrobci a garantujeme rychlé dodání i technickou podporu. Nabízíme řešení na míru pro různé průmyslové aplikace.",
+      icon: <Components size={82} color="#374151" />,
+      url: '/komponenty',
+      image: '/bolts.png',
+      imageWidth: 300,
+      imageHeight: 350,
     },
     {
       title: "Servis",
-      description: "Rychlý a spolehlivý servis včetně krizových situací",
-      icon: <Service size={32} color="#374151" />
+      description: "Rychlý a spolehlivý servis včetně krizových situací. Zajišťujeme opravy, revize i modernizaci stávajících systémů. Nabízíme komplexní řešení pro různé průmyslové aplikace.",
+      icon: <Service size={82} color="#374151" />,
+      url: '/servis'
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Naše hlavní služby
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Kompletní portfolio služeb pro průmyslové aplikace
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group cursor-pointer transform transition-all duration-300 hover:scale-105 h-full"
-            >
-              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200 h-full flex flex-col">
-                <div className="w-16 h-16 rounded-xl bg-gray-100 flex items-center justify-center text-2xl mb-6 mx-auto">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+    <>
+      {services.map((service, index) => (
+        <section 
+          key={index}
+          className={`py-10 ${index % 2 === 1 ? 'bg-white' : 'bg-gray-200'}`}
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className={`flex items-center space-x-12 ${
+              index % 2 === 1 ? 'flex-row-reverse' : ''
+            }`}>
+              <div className={`w-1/2 flex justify-center ${
+                index % 2 === 1 ? 'justify-center' : 'justify-center'
+              }`}>
+                {service.image ? (
+                  <Image src={service.image} alt={service.title} width={service.imageWidth} height={service.imageHeight} />
+                ) : (
+                  service.icon
+                )}
+              </div>
+              <div className="w-1/2">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-800 uppercase">
                   {service.title}
-                </h3>
-                <p className="text-gray-600 text-center leading-relaxed">
+                </h2>
+                <p className="text-xl text-gray-600">
                   {service.description}
                 </p>
+                <Link
+                  href={service.url}
+                  className="inline-block mt-6 px-5 py-2 bg-gray-800 text-white font-semibold rounded-lg shadow hover:bg-gray-900 transition-colors"
+                >
+                  Zjistit více
+                </Link>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
+          </div>
+        </section>
+      ))}
+    </>
   );
 } 
