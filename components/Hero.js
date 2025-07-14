@@ -38,6 +38,7 @@ export default function Hero() {
         </video>
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 top-1/2 -bottom-2 bg-gradient-to-b from-black/0 to-gray-900"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

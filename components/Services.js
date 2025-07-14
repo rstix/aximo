@@ -13,6 +13,8 @@ export default function Services() {
       icon: <Engine size={82} color="#374151" />,
       url: '/pohony',
       image: '/pohony.png',
+      id: 'pohony',
+      btnText: 'Nabídka pohonů',
     },
     {
       title: "Stavba a elektro",
@@ -20,6 +22,8 @@ export default function Services() {
       icon: <Construction size={82} color="#374151" />,
       image: '/stavba.png',
       url: '/stavba-a-elektro',
+      id: 'stavba',
+      btnText: 'Zjistit více',
     },
     {
       title: "Komponenty",
@@ -27,6 +31,8 @@ export default function Services() {
       icon: <Components size={82} color="#374151" />,
       url: '/komponenty',
       image: '/komponenty.png',
+      id: 'komponenty',
+      btnText: 'Přehled komponent',
     },
     {
       title: "Servis",
@@ -34,6 +40,8 @@ export default function Services() {
       icon: <Service size={82} color="#374151" />,
       url: '/servis',
       image: '/servis.png',
+      id: 'servis',
+      btnText: 'Více o servisu',
     },
   ];
 
@@ -42,6 +50,7 @@ export default function Services() {
       {services.map((service, index) => (
         <section 
           key={index}
+          id={service.id}
           className={`py-10 ${index % 2 === 1 ? 'bg-white' : 'bg-gray-200'}`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +77,7 @@ export default function Services() {
                   href={service.url}
                   className="inline-block mt-6 px-5 py-2 bg-gray-800 text-white font-semibold rounded-lg shadow hover:bg-gray-900 transition-colors"
                 >
-                  Zjistit více
+                    {service.btnText}
                 </Link>
               </div>
             </div>

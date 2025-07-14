@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import AboutUs from '@/components/AboutUs';
 import Services from '@/components/Services';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import References from '@/components/References';
@@ -11,8 +12,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      {/* prechod do bile/cerne */}
-      {/* TODO: <AboutUs /> */}
+      <AboutUs />
       <Services />
       {/* sekce vypadaji prazdne  */}
       {/* <WhyChooseUs /> */}
