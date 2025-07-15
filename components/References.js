@@ -1,16 +1,17 @@
+import Image from "next/image";
+
 export default function References() {
-  const customers = [
-    "HYUNDAI",
-    "ŠKODA VAGONKA", 
-    "ŽDAS",
-    "KOVODRUŽSTVO STRÁŽOV",
-    "FERRIT",
-    "Lukrom",
-    "Ferona",
-    "Vacutec",
-    "Mahle SK",
-    "Plakor",
-    "ČEZ"
+  const logos = [
+    { src: "/logos/mahle-logo.png", alt: "Mahle" },
+    { src: "/logos/ferrona-logo.png", alt: "Ferrona" },
+    { src: "/logos/plakor-logo.png", alt: "Plakor" },
+    { src: "/logos/kovo-logo.png", alt: "Kovodruzstvo" },
+    { src: "/logos/cez-logo.png", alt: "ČEZ" },
+    { src: "/logos/skoda-logo.png", alt: "Škoda" },
+    { src: "/logos/vacutec-logo.png", alt: "Vacutec" },
+    { src: "/logos/zdas-logo.png", alt: "ŽDAS" },
+    { src: "/logos/hyundai-logo.png", alt: "Hyundai" },
+    { src: "/logos/ferrit-logo.png", alt: "Ferrit" },
   ];
 
   return (
@@ -27,29 +28,23 @@ export default function References() {
 
         {/* Logo Carousel */}
         <div className="relative overflow-hidden">
-          <div className="flex space-x-12 animate-scroll">
+          <div className="flex gap-8 flex-wrap">
             {/* First set of logos */}
-            {customers.map((customer, index) => (
+            {logos.map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 bg-white rounded-lg px-8 py-6 min-w-[200px] flex items-center justify-center"
+                className="flex-shrink-0 bg-gray-50 rounded-lg px-6 py-1 min-w-[200px] flex items-center justify-center"
               >
-                <span className="text-lg font-semibold text-gray-700 text-center">
-                  {customer}
-                </span>
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={150}
+                  height={80}
+                  className="object-contain h-18 w-auto"
+                />
               </div>
             ))}
-            {/* Duplicate set for seamless loop */}
-            {customers.map((customer, index) => (
-              <div
-                key={`duplicate-${index}`}
-                className="flex-shrink-0 bg-gray-100 rounded-lg px-8 py-6 min-w-[200px] flex items-center justify-center"
-              >
-                <span className="text-lg font-semibold text-gray-700 text-center">
-                  {customer}
-                </span>
-              </div>
-            ))}
+
           </div>
         </div>
       </div>
