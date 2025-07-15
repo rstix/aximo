@@ -12,15 +12,15 @@ export default function Services() {
       description: "Kompletní řešení průmyslových pohonů včetně servisu a údržby. Zajišťujeme návrh, dodávku, montáž i následnou technickou podporu. Naše zkušenosti pokrývají široké spektrum aplikací v průmyslu.",
       icon: <Engine size={82} color="#374151" />,
       url: '/pohony',
-      image: '/pohony_1.png',
+      image: '/pohony_2.png',
       id: 'pohony',
       btnText: 'Nabídka pohonů',
     },
     {
-      title: "Stavba a elektro",
+      title: "Stavba",
       description: "Stavební úpravy a elektroinstalace na klíč. Realizujeme kompletní rekonstrukce, nové instalace i modernizace stávajících systémů. Zajistíme projekt, dodávku, montáž i následný servis dle vašich potřeb.",
       icon: <Construction size={82} color="#374151" />,
-      image: '/stavba_2.png',
+      image: '/stavba_11.png',
       url: '/stavba-a-elektro',
       id: 'stavba',
       btnText: 'Zjistit více',
@@ -30,7 +30,7 @@ export default function Services() {
       description: "Dodávky kvalitních komponentů a náhradních dílů. Spolupracujeme s předními výrobci a garantujeme rychlé dodání i technickou podporu. Nabízíme řešení na míru pro různé průmyslové aplikace.",
       icon: <Components size={82} color="#374151" />,
       url: '/komponenty',
-      image: '/komponenty_3.png',
+      image: '/komponenty_5.png',
       id: 'komponenty',
       btnText: 'Přehled komponent',
     },
@@ -39,7 +39,7 @@ export default function Services() {
       description: "Rychlý a spolehlivý servis včetně krizových situací. Zajišťujeme opravy, revize i modernizaci stávajících systémů. Nabízíme komplexní řešení pro různé průmyslové aplikace.",
       icon: <Service size={82} color="#374151" />,
       url: '/servis',
-      image: '/servis_3.png',
+      image: '/servis_6.png',
       id: 'servis',
       btnText: 'Více o servisu',
     },
@@ -51,8 +51,9 @@ export default function Services() {
         <section 
           key={index}
           id={service.id}
-          className={`py-8 sm:py-10 lg:py-12 ${index % 2 === 1 ? 'bg-white' : 'bg-gray-200'}`}
+          className={`py-8 sm:py-10 lg:py-12  ${index % 2 === 1 ? 'bg-white' : 'bg-gray-200'}`}
         >
+          
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
               index % 2 === 1 ? 'lg:flex-row-reverse' : ''
